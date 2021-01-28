@@ -1,0 +1,20 @@
+.nav{
+    height: 140px;
+    background: var(--color-one);
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    color: var(--color-four);
+    font-size: 80px;
+    font-style: italic;
+    font-family: var(--font-three);
+    margin-left: 10%;
+}
+
+@media(max-width: 500px){
+    .logo{
+        font-size: 50px;
+    }
+}

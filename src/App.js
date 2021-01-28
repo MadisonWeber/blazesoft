@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import Message from './components/Message'
+import AddBook from './components/AddBook'
+import EditBook from './components/EditBook'
+import './css/App.css';
+import { useSelector } from 'react-redux';
+import { getShowMessage, getShowAdd, getEditBook } from "./store/bookSlice"
+
 
 function App() {
+
+  const currentMessage = useSelector(getShowMessage)
+  const showAddBook = useSelector(getShowAdd)
+  const currentEditBook = useSelector(getEditBook)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Hero />
+      {currentMessage.message && <Message /> }
+      {showAddBook && <AddBook /> }
+      {currentEditBook.name && <EditBook /> }
     </div>
   );
 }

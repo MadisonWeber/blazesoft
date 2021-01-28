@@ -1,0 +1,83 @@
+.addBook{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(40, 40, 40, .98);
+    min-height: 400px;
+    padding: 40px;
+    animation: slideAddBook 300ms ease-in-out;
+}
+
+.form__title{
+    color: var(--color-four);
+    margin-bottom: 60px;
+    text-transform: capitalize;
+}
+
+form{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+form input{
+    padding: 8px 10px;
+    outline: none;
+    margin-right: 40px;
+    width: 260px;
+    font-size: 18px;
+}
+
+form label {
+   
+    display: block;
+    margin-bottom: 6px;
+    color: white;
+}
+
+
+.add__to__database{
+    margin-top: 60px;
+    padding: 10px 16px ;
+    color: white;
+    font-size: 16px;
+    background-color: var(--color-two);
+}
+
+.add__to__database:hover{
+    transform: scale(1.03);
+}
+
+.fa-times.add{
+    font-size: 32px;
+    right: 15px;
+    top: 15px;
+}
+
+.fa-times.add:hover{
+    color: var(--color-four);
+}
+
+
+@keyframes slideAddBook {
+    from {
+        transform: translateY(400px);
+    }to{
+        transform: translateY(0px);
+    }
+}
+
+@media(max-width: 920px){
+    form {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    label{
+        margin-top: 20px;
+    }
+
+    form input{
+        width: 280px;
+    }
+}

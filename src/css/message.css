@@ -1,0 +1,41 @@
+.message{
+    position: absolute;
+    background-color: var(--color-five);
+    height: 80px;
+    width: 80%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideMessage 200ms ease-in;
+
+}
+
+
+.message__detail{
+    color: var(--color-four);
+    text-transform: capitalize;
+   
+}
+
+.fa-times{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes slideMessage {
+    from {
+        transform: translateY(200px);
+    }to{
+        transform: translateY(0px);
+    }
+}
+

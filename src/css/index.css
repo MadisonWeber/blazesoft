@@ -1,0 +1,35 @@
+
+
+:root{
+
+    --font-one : 'Open Sans', sans-serif;
+    --font-two : 'Cormorant Garamond', serif;
+    --font-three: 'Fredoka One', cursive;
+    --color-one: #022C43;
+    --color-two: #053f5e;
+    --color-three: #115173;
+    --color-four: #FFD700;
+    --color-five : #2b6f94;
+    --color-six: #6596b1;
+    --orange:rgb(255, 130, 57);
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-one);
+    background-color: var(--color-two);
+}
+
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
